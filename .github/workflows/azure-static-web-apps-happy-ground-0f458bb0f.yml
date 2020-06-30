@@ -29,7 +29,7 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "samples/green-app/app" # App source code path
           api_location: "samples/green-app/api" # Api source code path - optional
-          app_artifact_location: "samples/green-app/dist" # Built app content directory - optional
+          app_artifact_location: "samples/green-app/app/dist" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
