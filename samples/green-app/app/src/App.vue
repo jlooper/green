@@ -9,18 +9,9 @@ import axios from 'axios';
 export default {
 	name: 'App',
 	created() {
-		axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: 'US-NEISO',
-					headers: {
-						'auth-token': 'c099158761a3a563',
-					},
-				},
-			})
-			.then(function(response) {
-				console.log(response);
-			});
+		axios.get('/api/getCarbonUsage?region=US-NEISO').then(function(response) {
+			console.log(response);
+		});
 	},
 };
 </script>
