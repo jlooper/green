@@ -3,7 +3,7 @@ module.exports = async function (context, req) {
 	const region = req.query.region || (req.body && req.body.region);
 	console.log(region);
 	axios
-		.get('api.co2signal.com/v1/latest', {
+		.get('https://api.co2signal.com/v1/latest', {
 			params: {
 				countryCode: region,
 				headers: {
@@ -16,9 +16,10 @@ module.exports = async function (context, req) {
 			if (error == null) {
 				context.res = { body: response.data };
 				context.done();
-			} else {
-				context.res = { body: error };
-				context.done();
 			}
+		})
+		.catch(function (error) {
+			context.res = { body: error };
+			context.done();
 		});
 };
