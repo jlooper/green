@@ -14,10 +14,12 @@ module.exports = async function (context, req) {
 	try {
 		const { data } = await axios(config);
 		context.log(data);
+		context.res = { body: data.data };
 		// do something with the data
 		return data;
 	} catch (err) {
 		context.log(err);
+		context.res = { body: data };
 		// do something with the error
 	}
 };
