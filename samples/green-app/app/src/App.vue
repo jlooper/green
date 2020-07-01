@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       response: {},
-      carbonIntensity: 0,
+      carbonIntensity: "calculating...",
       background: ""
     };
   },
