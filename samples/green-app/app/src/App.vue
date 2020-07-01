@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Track your Region's Carbon Usage</h1>
-    <h2>{{carbonIntensity}},{{fossilFuelPercentage}}</h2>
+    <h2>hey</h2>
   </div>
 </template>
 
@@ -12,18 +12,19 @@ export default {
   data() {
     return {
       fossilFuelPercentage: "",
-      carbonIntensity: ""
+      carbonIntensity: "",
+      response: {}
     };
   },
-  created() {
-    axios
+  async created() {
+    await axios
       .get(
         "https://getcarbonusage.azurewebsites.net/api/getCarbonUsage?region=US-NEISO"
       )
       .then(function(response) {
         console.log(response.data);
-        this.fossilFuelPercentage = response.data.fossilFuelPercentage;
-        this.carbonIntensity = response.data.carbonIntensity;
+        //this.fossilFuelPercentage = res.fossilFuelPercentage;
+        //this.carbonIntensity = res.carbonIntensity;
       });
   }
 };
