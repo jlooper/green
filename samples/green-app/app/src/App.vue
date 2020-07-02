@@ -18,22 +18,26 @@ export default {
   async created() {
     try {
       const response = await axios.get(
-		"https://getcarbonusage.azurewebsites.net/api/getCarbonUsage?region=US-NEISO"
+        "https://getcarbonusage.azurewebsites.net/api/getCarbonUsage?region=US-NEISO"
       );
       this.response = response.data;
-      this.carbonIntensity = response.data.carbonIntensity;
+      this.carbonIntensity = response.data.carbonIntensity.toFixed(2);
       if (this.carbonIntensity <= 100) {
+        //green
         this.background =
-          "background: rgb(0,3,69); background: linear-gradient(0deg, rgba(0,3,69,1) 0%, rgba(99,255,3,1) 100%)";
+          "background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(151,222,107,1) 100%);";
       } else if (this.carbonIntensity <= 200) {
+        //yellow
         this.background =
-          "background: rgb(0,3,69); background: linear-gradient(0deg, rgba(0,3,69,1) 0%, rgba(255,250,3,1) 100%)";
+          "background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(236,214,98,1) 100%);";
       } else if (this.carbonIntensity <= 300) {
+        //orange
         this.background =
-          "background: rgb(0,3,69); background: linear-gradient(0deg, rgba(0,3,69,1) 0%, rgba(255,139,0,1) 100%)";
+          "background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(242,145,65,1) 100%);";
       } else if (this.carbonIntensity > 300) {
+        //red
         this.background =
-          "background: rgb(0,3,69); background: linear-gradient(0deg, rgba(0,3,69,1) 0%, rgba(255,0,0,1) 100%)";
+          "background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(242,85,65,1) 100%);";
       }
     } catch (error) {
       console.error(error);
