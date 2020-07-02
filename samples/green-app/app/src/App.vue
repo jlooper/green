@@ -18,7 +18,7 @@ export default {
   async created() {
     try {
       const response = await axios.get(
-        "https://getcarbonusage.azurewebsites.net/api/getCarbonUsage?region=US-NEISO"
+		"https://getcarbonusage.azurewebsites.net/api/getCarbonUsage?region=US-NEISO"
       );
       this.response = response.data;
       this.carbonIntensity = response.data.carbonIntensity;

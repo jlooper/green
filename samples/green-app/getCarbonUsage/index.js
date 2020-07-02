@@ -7,6 +7,7 @@ module.exports = async function (context, req) {
 		method: 'get',
 		url: 'https://api.co2signal.com/v1/latest?countryCode=' + region + '',
 		headers: {
+			//use your own token please
 			'auth-token': 'c099158761a3a563',
 		},
 	};

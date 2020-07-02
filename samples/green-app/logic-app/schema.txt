@@ -1,0 +1,69 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Send_an_email_(V2)": {
+                "inputs": {
+                    "body": {
+                        "Body": "<p>Your region's carbon usage is:<br>\n<br>\n@{body('getCarbonUsage')}</p>",
+                        "Subject": "Your region's carbon usage",
+                        "To": "jelooper@microsoft.com"
+                    },
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['office365']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/v2/Mail"
+                },
+                "runAfter": {
+                    "getCarbonUsage": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            },
+            "getCarbonUsage": {
+                "inputs": {
+                    "body": {
+                        "region": "FR"
+                    },
+                    "function": {
+                        "id": "/subscriptions/-your subscription here-/resourceGroups/getcarbonusage/providers/Microsoft.Web/sites/getCarbonUsage/functions/getCarbonUsage"
+                    }
+                },
+                "runAfter": {},
+                "type": "Function"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "Recurrence": {
+                "recurrence": {
+                    "frequency": "Hour",
+                    "interval": 1
+                },
+                "type": "Recurrence"
+            }
+        }
+    },
+    "parameters": {
+        "$connections": {
+            "value": {
+                "office365": {
+                    "connectionId": "/subscriptions/--your subscription here--/resourceGroups/green-app/providers/Microsoft.Web/connections/office365",
+                    "connectionName": "office365",
+                    "id": "/subscriptions/--your subscription here--/providers/Microsoft.Web/locations/eastus2/managedApis/office365"
+                }
+            }
+        }
+    }
+}
