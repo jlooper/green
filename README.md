@@ -12,11 +12,23 @@ Create a web app that:
 
 - tells you which of your appliances would be good to run at which hour
 
-Create a connection between an Azure Function using one of the APIs below to trigger a Logic App to do something like send a reminder to charge your EV
+Create a connection between an Azure Function using one of the APIs below to trigger a Logic App to do something like send a reminder to charge your EV 
+
+## Hackathon Instructions
+
+If you're participating in a hackathon, here are [instructions](hackathon.md).
+
+## Workshop Instructions
+
+Participating in a workshop? Read instructions [here](workshop.md).
 
 ## Sample Code
 
-TBD
+🌱 A [static web app](./samples/green-app/app) to display your region's carbon intensity
+
+🌱 A [logic app](./samples/green-app/logic-app) to send an email about your region's carbon intensity hourly
+
+🌱 A standalone [Azure function](./samples/green-app/getCarbonUsage) to query the [co2signal API](https://docs.co2signal.com/#introduction) by [tmrow](https://www.tmrow.com/)
 
 ## Useful APIs
 
