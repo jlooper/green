@@ -24,11 +24,11 @@ Participating in a workshop? Read instructions [here](workshop.md).
 
 ## Sample Code
 
-🌱 A [static web app](./samples/green-app/app) to display your region's carbon intensity
+🌱 A [static web app](./samples/web-app) to display your region's carbon intensity
 
-🌱 A [logic app](./samples/green-app/logic-app) to send an email about your region's carbon intensity hourly
+🌱 A [logic app](./samples/logic-app) to send an email about your region's carbon intensity hourly
 
-🌱 A standalone [Azure function](./samples/green-app/getCarbonUsage) to query the [co2signal API](https://docs.co2signal.com/#introduction) by [tmrow](https://www.tmrow.com/)
+🌱 A standalone [Azure function](./samples/function-app) to query the [co2signal API](https://docs.co2signal.com/#introduction) by [tmrow](https://www.tmrow.com/). Note, this function is used by the static web app so it is in the same folder as the web app, but you could use this completely separately for other uses.
 
 ## Useful APIs
 

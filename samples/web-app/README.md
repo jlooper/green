@@ -1,4 +1,4 @@
-# A Green App to Calculate your Region's Carbon Intensity
+# A Web App to Calculate your Region's Carbon Intensity
 
 This app uses a separate Azure Function to get your local carbon usage. It's a basic Vue.js app created using the Vue CLI that uses Axios to call the Azure function. The background of the app changes in color based on your region's usage.
 
