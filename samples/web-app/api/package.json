@@ -1,5 +1,4 @@
 {
-	"name": "green-functions",
-	"version": "1.0.0",
-	"private": true
+	"name": "api",
+	"version": "1.0.0"
 }
