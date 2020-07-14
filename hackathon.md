@@ -7,7 +7,7 @@
 
 Want to hack using this content? Feel free! 
 
-You can create a hackathon of any link building on Green Tech, but this  repo is most suitable for a short overnight hackathon or a Micro-Hack. Fork this repo and edit the instructions below for your purposes.
+You can create a hackathon of any length building on Green Tech, but this repo is most suitable for a short overnight hackathon or a two-hour Micro-Hack. Fork this repo and edit the instructions below for your purposes.
 
 ### Current Hackathon: Green Forum Micro-Hack, July 16th, 2020 with Microsoft Interns and Student Ambassadors worldwide.
  
@@ -17,7 +17,7 @@ You can create a hackathon of any link building on Green Tech, but this  repo is
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | 11:00         | Introduction and welcome                                                                                                                |
 | 11:10 - 11:40 | Presentation by Asim Hussain, Cloud Developer Advocate, Green Team on Green Tech and how to be an environmentally responsible developer |
-| 11:40         | Code walk-through by Jen: building a Web App, and Azure Function, and a Logic App to construct a Carbon Trigger application                                                                      |
+| 11:40         | Code walk-through by Jen: building a Web App, and Azure Function, and a Logic App to construct a Carbon Trigger application             |
 | 12:00-12:45   | Live Hacking begins! Jen and Asim will live code something using a green API                                                            |
 | 12:45-1:00    | Q&A on Teams Live                                                                                                                       |
 |               |
