@@ -23,7 +23,8 @@ export default {
     this.loading = true;
     try {
       const response = await axios.get(
-        "https://getcarbonusage.azurewebsites.net/api/getCarbonUsage?region=FR"
+        "/api/getCarbonUsage?region=Fr"
+        //"https://getcarbonusage.azurewebsites.net/api/getCarbonUsage?region=FR"
       );
       this.response = response.data;
       if (this.response !== null) {
