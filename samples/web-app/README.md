@@ -10,7 +10,7 @@ To launch this app on ASWA, fork this repo to your own GitHub account and either
 
 Build an app from scratch using the Vue CLI and deploy it to Static Apps via the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps&WT.mc_id=green-github-jelooper)!
 
-Visit this app live at https://happy-ground-0f458bb0f.azurestaticapps.net/ to see France's current carbon intensity. Change the region by querying in the URL: https://happy-ground-0f458bb0f.azurestaticapps.net?region=US-NEISO.
+Visit this app live at https://happy-ground-0f458bb0f.azurestaticapps.net/ to see France's current carbon intensity. Change the region by adding query params in the URL: https://happy-ground-0f458bb0f.azurestaticapps.net?region=US-NEISO.
 
 ---
 
