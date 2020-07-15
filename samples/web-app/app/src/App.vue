@@ -14,10 +14,10 @@ export default {
   data() {
     return {
       response: {},
-      carbonIntensity: "calculating...",
+      carbonIntensity: "",
       background: "",
       loading: false,
-      region: "FR"
+      region: ""
     };
   },
   async created() {
