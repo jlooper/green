@@ -4,8 +4,12 @@ Would you like to try to create a project that has a 'carbon trigger'? A carbon 
 
 ## Hackathon Instructions
 
-If you're participating in a hackathon, go here: [instructions](hackathon.md).
+If you're participating in a hackathon, [here](hackathon.md).
 
 ## Workshop Instructions
 
-Participating in a workshop? go here: [here](workshop.md).
+Participating in a workshop? go [here](workshop.md).
+
+[Contributing](CONTRIBUTING.md)
+
+[Code of Conduct](CODE_OF_CONDUCT.md)
