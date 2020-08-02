@@ -37,7 +37,7 @@ Typing `npm run serve` will open your app on your localhost. So far, it's just a
 
 ## Build the web app interface
 
-Now, you can start building the interface for your carbon trigger app. Working in `/src/main.js`, import the vue-router by overwriting that file with this code:
+Now, you can start building the interface for your carbon trigger app. Working in [`/src/main.js`](./samples/web-app/app/src/main.js), import the vue-router by overwriting that file with this code:
 
 ```
 import Vue from 'vue';
@@ -55,7 +55,7 @@ new Vue({
 ```
 Although this app only has one page, you're going to use the router to read query parameters from the url, later on.
 
-Next, replace the `<template>` block at the top of `/src/App.vue` with the following markup: 
+Next, replace the `<template>` block at the top of [`/src/App.vue`](./samples/web-app/app/src/App.vue) with the following markup: 
 
 ```
 <template>
@@ -73,7 +73,7 @@ In this block, you will show a loading animation (it's a spinning leaf) until th
 
 ## Build the web app logic
 
-Now you're going to edit the `<script>` block in `/src/App.vue`. To clear the error that's thrown, delete the import of HelloWorld as you're not going to use it (it's the line under the `<script>` tag. Also delete these lines, as you don't need to use this component:
+Now you're going to edit the `<script>` block in [`/src/App.vue`](./samples/web-app/app/src/App.vue). To clear the error that's thrown, delete the import of HelloWorld as you're not going to use it (it's the line under the `<script>` tag. Also delete these lines, as you don't need to use this component:
 
 ```
 components: {
@@ -340,14 +340,14 @@ app_location: "app" # App source code path
 api_location: "api" # Api source code path - optional
 app_artifact_location: "dist" # Built app content directory - optional
 ```          
-This way, the build process, managed by GitHub Actions, will kick off whenever you make changes to the files, and both your function and your app will be built and deployed. You can test your new app on the url that you're given by the process, something like `https://happy-ground-0f458bb0f.azurestaticapps.net`.
+This way, the build process, managed by GitHub Actions, will kick off whenever you make changes to the files, and both your function and your app will be built and deployed. You can test your new app on the url that you're given by the process, something like [`https://happy-ground-0f458bb0f.azurestaticapps.net`](https://happy-ground-0f458bb0f.azurestaticapps.net).
 
 At this point, you have built a nice static web app using Vue with a built-in Azure function that queries an API to get your region's carbon usage. What else can you build with this API? What other green applications would be fun to build?
 
 
 ## Next steps
 
-If you want to continue learning about Azure Static Web Apps, please visit the ]Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/publish-app-service-static-web-app-api/?WT.mc_id=green-github-jelooper) module on the topic for more information.
+If you want to continue learning about Azure Static Web Apps, please visit the [Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/publish-app-service-static-web-app-api/?WT.mc_id=green-github-jelooper) module on the topic for more information.
 
 
 <!--## Path to certification (AZ 900?)
