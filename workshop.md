@@ -46,14 +46,14 @@ Now, you can start building the interface for your carbon trigger app. Working i
 ```
 import Vue from 'vue';
 import App from './App.vue';
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router'; //new addition
 
-const router = new VueRouter({});
+const router = new VueRouter({}); //new addition
 Vue.config.productionTip = false;
-Vue.use(VueRouter);
+Vue.use(VueRouter);//new addition
 
 new Vue({
-	router,
+	router,  //new addition
 	render: (h) => h(App),
 }).$mount('#app');
 ```
