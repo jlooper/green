@@ -46,14 +46,14 @@ Now, you can start building the interface for your carbon trigger app. Working i
 ```
 import Vue from 'vue';
 import App from './App.vue';
-import VueRouter from 'vue-router'; //new addition
+import VueRouter from 'vue-router';   //new addition
 
-const router = new VueRouter({}); //new addition
+const router = new VueRouter({});    //new addition
 Vue.config.productionTip = false;
-Vue.use(VueRouter);//new addition
+Vue.use(VueRouter);                  //new addition
 
 new Vue({
-	router,  //new addition
+	router,                      //new addition
 	render: (h) => h(App),
 }).$mount('#app');
 ```
@@ -85,11 +85,15 @@ components: {
   }
 ```
 
-Now you need to import axios and add a data method, that always returns data to the front-end application. Under the line, `name: 'App'` add a data method:
+Now you need to import axios and add a data method, that always returns data to the front-end application.
 
 ```
 import axios from "axios";
+```
 
+Under the line, `name: 'App',` add the method - data():
+
+```
 data() {
     return {
       response: {},
@@ -103,7 +107,7 @@ data() {
 
 These values act as placeholders for the data that flows around the app.
 
-Next, add a lifecycle hook called 'created()' after the closing comma of the data() method. This lifecycle hook will fire when the app loads:
+Next, add a lifecycle hook called `created()` after the closing comma of the `data()` method. This lifecycle hook will fire when the app loads:
 
 ```
 async created() {
