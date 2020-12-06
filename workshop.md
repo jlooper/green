@@ -15,7 +15,11 @@ Learn how to build a Vue.js app on [Microsoft Learn](https://docs.microsoft.com/
 
 ## Architecture
 
-First, create a folder to house your app and api folders. Using the Vue CLI, installed locally on your machine, create a web app using the command line. `Cd` to the area you want on your local machine, and type `vue create app`. A wizard starts: use the default preset (babel, eslint). A folder with that name will be created. You should have a folder structure like this:
+First, create a folder to house your app and api folders. Using the Vue CLI, installed locally on your machine, create a web app using the command line. 
+- `cd` to the area you want on your local machine, and type `vue create app`. 
+- A wizard starts: use the default preset `Default ([Vue 2] babel, eslint)`. 
+- Package Manager : `NPM` . This is used below, you can use YARN as well.  
+A folder with that name will be created. You should have a folder structure like this:
 
 my-green-app    
 └───app
@@ -24,10 +28,10 @@ Cd to your app folder and use npm to install `axios` and `vue-router` to your ap
 
 ```javascript
 "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-router": "^3.3.4"
+    "vue-router": "^3.4.9"
   },
 
 ```
