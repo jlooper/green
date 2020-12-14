@@ -284,13 +284,15 @@ Since you use axios to query the co2signal API, make sure to add it to your func
 
 ```
 "dependencies": {
-    "axios": "0.19.2"
+    "axios": "0.21.0" //make sure the axios version is same as the version in your Vue-App architecture
   },
 ```
   
-Type 'npm i' to install axios, and then you're ready to test the API.
+Type `npm i` to install axios, and then you're ready to test the API.
 
-Now you can test your API call by clicking the 'debug' arrow in the left navigation of VS Code, then the 'attach to node function' arrow at the top. You'll see the function start to run and a URL produced. You can test it locally here: `http://localhost:7071/api/getCarbonUsage?region=US-NEISO` - don't forget to add a region code to the end, as the function expects it to come via a query string.
+Now you can test your API call by clicking the 'debug' arrow in the left navigation of VS Code, then the 'attach to node function' arrow at the top. You'll see the function start to run and a URL produced. You can test it locally here: `http://localhost:7071/api/getCarbonUsage?region=US-NEISO` - don't forget to add a [region code](http://api.electricitymap.org/v3/zones) to the end, as the function expects it to come via a query string.
+
+Incase of error make sure you have [azure-functions-core-tools](https://github.com/Azure/azure-functions-core-tools) installed in your machine. 
 
 If all is well, you'll see some JSON returned for your region: 
 
@@ -332,7 +334,7 @@ You should now be able to use your new API locally. Assuming your API is still r
 
 ![your new app](images/3.png)
 
-Try changing the region in the query string like this: http://localhost:8080/#/?region=US-NEISO - does the interface change?
+Try changing [the region](http://api.electricitymap.org/v3/zones) in the query string like this: http://localhost:8080/#/?region=US-NEISO - does the interface change?
 
 
 ## Deploy the app
