@@ -23,6 +23,7 @@ A folder with that name will be created. You should have a folder structure like
 
 my-green-app    
 └───app
+└───api
 
 Cd to your app folder and use npm to install `axios` and `vue-router` to your app so that you can query an API and use query parameters in your url: `npm add vue-router axios`. Your package.json file in the root of your app should now include these dependencies:
 
