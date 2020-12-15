@@ -15,19 +15,23 @@ Learn how to build a Vue.js app on [Microsoft Learn](https://docs.microsoft.com/
 
 ## Architecture
 
-First, create a folder to house your app and api folders. Using the Vue CLI, installed locally on your machine, create a web app using the command line. `Cd` to the area you want on your local machine, and type `vue create app`. A wizard starts: use the default preset (babel, eslint). A folder with that name will be created. You should have a folder structure like this:
+First, create a folder to house your app and api folders. Using the Vue CLI, installed locally on your machine, create a web app using the command line. 
+- `cd` to the area you want on your local machine, and type `vue create app`. 
+- A wizard starts: use the default preset `Default ([Vue 2] babel, eslint)`. 
+- Package Manager : `NPM` . This is used below, you can use YARN as well.  
+A folder with that name will be created. You should have a folder structure like this:
 
 my-green-app    
-└───app
+└───app 
 
 Cd to your app folder and use npm to install `axios` and `vue-router` to your app so that you can query an API and use query parameters in your url: `npm add vue-router axios`. Your package.json file in the root of your app should now include these dependencies:
 
 ```javascript
 "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-router": "^3.3.4"
+    "vue-router": "^3.4.9"
   },
 
 ```
@@ -42,14 +46,14 @@ Now, you can start building the interface for your carbon trigger app. Working i
 ```
 import Vue from 'vue';
 import App from './App.vue';
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router';   //new addition
 
-const router = new VueRouter({});
+const router = new VueRouter({});    //new addition
 Vue.config.productionTip = false;
-Vue.use(VueRouter);
+Vue.use(VueRouter);                  //new addition
 
 new Vue({
-	router,
+	router,                      //new addition
 	render: (h) => h(App),
 }).$mount('#app');
 ```
@@ -81,11 +85,15 @@ components: {
   }
 ```
 
-Now you need to import axios and add a data method, that always returns data to the front-end application. Under the line, `name: 'App'` add a data method:
+Now you need to import axios and add a data method, that always returns data to the front-end application.
 
 ```
 import axios from "axios";
+```
 
+Under the line, `name: 'App',` add the method - data():
+
+```
 data() {
     return {
       response: {},
@@ -99,7 +107,7 @@ data() {
 
 These values act as placeholders for the data that flows around the app.
 
-Next, add a lifecycle hook called 'created()' after the closing comma of the data() method. This lifecycle hook will fire when the app loads:
+Next, add a lifecycle hook called `created()` after the closing comma of the `data()` method. This lifecycle hook will fire when the app loads:
 
 ```
 async created() {
@@ -276,13 +284,15 @@ Since you use axios to query the co2signal API, make sure to add it to your func
 
 ```
 "dependencies": {
-    "axios": "0.19.2"
+    "axios": "0.21.0" //make sure the axios version is same as the version in your Vue-App architecture
   },
 ```
   
-Type 'npm i' to install axios, and then you're ready to test the API.
+Type `npm i` to install axios, and then you're ready to test the API.
 
-Now you can test your API call by clicking the 'debug' arrow in the left navigation of VS Code, then the 'attach to node function' arrow at the top. You'll see the function start to run and a URL produced. You can test it locally here: `http://localhost:7071/api/getCarbonUsage?region=US-NEISO` - don't forget to add a region code to the end, as the function expects it to come via a query string.
+Now you can test your API call by clicking the 'debug' arrow in the left navigation of VS Code, then the 'attach to node function' arrow at the top. You'll see the function start to run and a URL produced. You can test it locally here: `http://localhost:7071/api/getCarbonUsage?region=US-NEISO` - don't forget to add a [region code](http://api.electricitymap.org/v3/zones) to the end, as the function expects it to come via a query string.
+
+Incase of error make sure you have [azure-functions-core-tools](https://github.com/Azure/azure-functions-core-tools) installed in your machine. 
 
 If all is well, you'll see some JSON returned for your region: 
 
@@ -324,7 +334,7 @@ You should now be able to use your new API locally. Assuming your API is still r
 
 ![your new app](images/3.png)
 
-Try changing the region in the query string like this: http://localhost:8080/#/?region=US-NEISO - does the interface change?
+Try changing [the region](http://api.electricitymap.org/v3/zones) in the query string like this: http://localhost:8080/#/?region=US-NEISO - does the interface change?
 
 
 ## Deploy the app
